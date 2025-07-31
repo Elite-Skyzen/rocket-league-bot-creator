@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Créer un Bot RL</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://images3.alphacoders.com/133/1339833.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.8);
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px #00bfff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4e00;
+      text-shadow: 0 0 15px #0057b7;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #00bfff;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 15px;
+      background: #ff4e00;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 20px #ff4e00;
+    }
+
+    button:hover {
+      background: #ff6e29;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Configure ton Bot et Match RL</h1>
+    <form action="/generate" method="post">
+      <label for="bot_name">Nom du Bot</label>
+      <input type="text" name="bot_name" id="bot_name" required>
+
+      <label for="car">Voiture</label>
+      <select name="car" id="car">
+        <option>Octane</option>
+        <option>Fennec</option>
+        <option>Dominus</option>
+        <option>Breakout</option>
+        <option>Merc</option>
+      </select>
+
+      <label for="difficulty">Difficulté</label>
+      <select name="difficulty" id="difficulty">
+        <option>facile</option>
+        <option>moyen</option>
+        <option>difficile</option>
+      </select>
+
+      <label for="rank">Rang estimé</label>
+      <select name="rank" id="rank">
+        <option>bronze</option>
+        <option>argent</option>
+        <option>or</option>
+        <option>platine</option>
+        <option>diamant</option>
+        <option>champion</option>
+        <option>grand champion</option>
+        <option>supersonic legend</option>
+      </select>
+
+      <label for="mode">Mode de jeu</label>
+      <select name="mode" id="mode">
+        <option>1v1</option>
+        <option>2v2</option>
+        <option>3v3</option>
+        <option>4v4</option>
+      </select>
+
+      <label for="arena">Terrain</label>
+      <select name="arena" id="arena">
+        <option>DFH Stadium</option>
+        <option>Champions Field</option>
+        <option>Utopia Coliseum</option>
+        <option>Neo Tokyo</option>
+        <option>Salty Shores</option>
+        <option>10th Anniversary Stadium</option>
+      </select>
+
+      <label for="mutators">Mutateurs</label>
+      <select name="mutators" id="mutators">
+        <option>Aucun</option>
+        <option>Gravité basse</option>
+        <option>Vitesse rapide</option>
+        <option>Ballon cube</option>
+        <option>Rumble</option>
+      </select>
+
+      <button type="submit">Générer et Lancer le Match</button>
+    </form>
+  </div>
+</body>
+</html>
