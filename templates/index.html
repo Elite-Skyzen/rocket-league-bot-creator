@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Créateur de Bot RL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('https://images3.alphacoders.com/108/thumbbig-1080926.webp') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      padding: 2rem;
+    }
+    .form-container {
+      background-color: rgba(0,0,0,0.75);
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border-radius: 5px;
+      border: none;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+    .checkbox-group label {
+      width: 45%;
+      background: rgba(255,255,255,0.1);
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      padding: 1rem;
+      width: 100%;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>🚀 Générateur de Bot Rocket League</h1>
+    <form action="/generate" method="post">
+      <label>Nom du Bot :
+        <input type="text" name="bot_name" required>
+      </label>
+
+      <label>Voiture :
+        <select name="car" required>
+          <option>Octane</option>
+          <option>Fennec</option>
+          <option>Dominus</option>
+          <option>Breakout</option>
+          <option>Merc</option>
+        </select>
+      </label>
+
+      <label>Difficulté :
+        <select name="difficulty" required>
+          <option>Facile</option>
+          <option>Moyenne</option>
+          <option>Difficile</option>
+        </select>
+      </label>
+
+      <label>Rang :
+        <select name="rank" required>
+          <option>Bronze</option>
+          <option>Argent</option>
+          <option>Or</option>
+          <option>Platine</option>
+          <option>Diamant</option>
+          <option>Champion</option>
+          <option>Grand Champion</option>
+          <option>SSL</option>
+        </select>
+      </label>
+
+      <label>Mode de jeu :
+        <select name="mode" required>
+          <option>1v1</option>
+          <option>2v2</option>
+          <option>3v3</option>
+          <option>4v4</option>
+        </select>
+      </label>
+
+      <label>Arène :
+        <select name="arena" required>
+          <option>Champions Field</option>
+          <option>DFH Stadium</option>
+          <option>Utopia Coliseum</option>
+          <option>Beckwith Park</option>
+          <option>Wasteland</option>
+          <option>Neo Tokyo</option>
+          <option>Forbidden Temple</option>
+          <option>Manfield</option>
+        </select>
+      </label>
+
+      <label>Mutateurs :
+        <select name="mutators">
+          <option>Classique</option>
+          <option>Gravité basse</option>
+          <option>Balle carrée</option>
+          <option>Balle géante</option>
+          <option>Balles multiples</option>
+        </select>
+      </label>
+
+      <label>Compétences :</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="skills" value="Pinch"> Pinch</label>
+        <label><input type="checkbox" name="skills" value="Ground Pinch"> Ground Pinch</label>
+        <label><input type="checkbox" name="skills" value="Cuxir Pinch"> Cuxir Pinch</label>
+        <label><input type="checkbox" name="skills" value="Flip Reset"> Flip Reset</label>
+        <label><input type="checkbox" name="skills" value="Multiple Flip Resets"> Multiple Flip Resets</label>
+        <label><input type="checkbox" name="skills" value="Flip Reset Musty"> Flip Reset Musty</label>
+        <label><input type="checkbox" name="skills" value="Flip Reset Breezi"> Flip Reset Breezi</label>
+        <label><input type="checkbox" name="skills" value="Ceiling Reset"> Ceiling Reset</label>
+        <label><input type="checkbox" name="skills" value="No Flip Shot"> No Flip Shot</label>
+        <label><input type="checkbox" name="skills" value="Delayed Flip Shot"> Delayed Flip Shot</label>
+        <label><input type="checkbox" name="skills" value="Speed Flip"> Speed Flip</label>
+        <label><input type="checkbox" name="skills" value="Flip Chain"> Flip Chain</label>
+        <label><input type="checkbox" name="skills" value="Infield Pass"> Infield Pass</label>
+        <label><input type="checkbox" name="skills" value="Backboard Pass"> Backboard Pass</label>
+        <label><input type="checkbox" name="skills" value="Shadow Defense"> Shadow Defense</label>
+        <label><input type="checkbox" name="skills" value="Passing Plays"> Passing Plays</label>
+        <label><input type="checkbox" name="skills" value="Bumps & Demos"> Bumps & Demos</label>
+        <label><input type="checkbox" name="skills" value="Rotation"> Rotation</label>
+      </div>
+
+      <button type="submit">🚀 Générer et Lancer le Match</button>
+    </form>
+  </div>
+</body>
+</html>
+
