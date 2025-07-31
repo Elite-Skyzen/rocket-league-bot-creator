@@ -1,1 +1,57 @@
-<!DOCTYPE html><html><head><title>Mon site</title></head><body><h1>Bienvenue sur mon site</h1></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rocket League Bot Creator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #1e1e2f;
+      color: #fff;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+    form {
+      background: #2e2e3f;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Créer votre Bot Rocket League</h1>
+  <form action="mailto:ton-email@exemple.com" method="POST" enctype="text/plain">
+    <label>Nom du bot :</label><br>
+    <input type="text" name="bot_name" required><br>
+
+    <label>Compétences :</label><br>
+    <select name="skills">
+      <option value="attacker">Attaquant</option>
+      <option value="defender">Défenseur</option>
+      <option value="balanced">Équilibré</option>
+    </select><br>
+
+    <label>Difficulté :</label><br>
+    <select name="difficulty">
+      <option value="easy">Facile</option>
+      <option value="medium">Moyen</option>
+      <option value="hard">Difficile</option>
+    </select><br>
+
+    <button type="submit">Générer mon bot</button>
+  </form>
+</body>
+</html>
